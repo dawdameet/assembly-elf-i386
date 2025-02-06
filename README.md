@@ -1,6 +1,4 @@
-Below is a professional and detailed `README.md` file for your `elf_i386` assembly extension. This file will serve as the documentation for your extension, providing users with an overview of its features, installation instructions, and usage examples.
 
----
 
 # Assembly ELF i386 Extension
 
