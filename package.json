@@ -1,0 +1,25 @@
+{
+  "name": "assembly-elf-i386",
+  "displayName": "Assembly ELF i386",
+  "description": "For Assembly i386",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "assembly",
+      "aliases": ["Assembly", "assembly"],
+      "extensions": [".asm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "assembly",
+      "scopeName": "source.asm.i386",
+      "path": "./syntaxes/assembly.tmLanguage.json"
+    }]
+  }
+}
