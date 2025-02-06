@@ -1,0 +1,32 @@
+{
+    "Define Section": {
+      "prefix": "section",
+      "body": ["section .${1:text}"],
+      "description": "Define a section in the ELF file"
+    },
+    "Global Symbol": {
+      "prefix": "global",
+      "body": ["global ${1:symbol_name}"],
+      "description": "Declare a global symbol"
+    },
+    "Extern Symbol": {
+      "prefix": "extern",
+      "body": ["extern ${1:symbol_name}"],
+      "description": "Declare an external symbol"
+    },
+    "Move Instruction": {
+      "prefix": "mov",
+      "body": ["mov ${1:eax}, ${2:ebx}"],
+      "description": "Move data between registers or memory"
+    },
+    "Call Function": {
+      "prefix": "call",
+      "body": ["call ${1:function_name}"],
+      "description": "Call a function"
+    },
+    "Define Byte": {
+      "prefix": "db",
+      "body": ["db ${1:value}"],
+      "description": "Define a byte of data"
+    }
+  }

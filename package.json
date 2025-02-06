@@ -1,25 +1,47 @@
 {
   "name": "assembly-elf-i386",
   "displayName": "Assembly ELF i386",
-  "description": "For Assembly i386",
+  "description": "Syntax highlighting, snippets, and autocomplete for elf_i386 assembly.",
   "version": "0.0.1",
+  "publisher": "your-publisher-name",
   "engines": {
-    "vscode": "^1.96.0"
+    "vscode": "^1.70.0"
   },
-  "categories": [
-    "Programming Languages"
+  "categories": ["Programming Languages"],
+  "activationEvents": [
+    "onLanguage:asm-i386"
   ],
+  "main": "./out/extension.js",
   "contributes": {
-    "languages": [{
-      "id": "assembly",
-      "aliases": ["Assembly", "assembly"],
-      "extensions": [".asm"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "assembly",
-      "scopeName": "source.asm.i386",
-      "path": "./syntaxes/assembly.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "asm-i386",
+        "aliases": ["Assembly ELF i386", "asm"],
+        "extensions": [".asm"]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "asm-i386",
+        "scopeName": "source.asm.i386",
+        "path": "./syntaxes/assembly.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "asm-i386",
+        "path": "./snippets/assembly.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "npm run compile"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "@types/vscode": "^1.70.0",
+    "@types/node": "^16.11.0"
   }
 }

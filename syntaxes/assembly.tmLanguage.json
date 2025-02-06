@@ -1,32 +1,58 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Assembly",
+	"name": "Assembly ELF i386",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+	  {
+		"include": "#instructions"
+	  },
+	  {
+		"include": "#registers"
+	  },
+	  {
+		"include": "#directives"
+	  },
+	  {
+		"include": "#comments"
+	  },
+	  {
+		"include": "#strings"
+	  },
+	  {
+		"include": "#numbers"
+	  }
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.assembly",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.assembly",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.assembly",
-					"match": "\\\\."
-				}
-			]
-		}
+	  "instructions": {
+		"name": "keyword.control.assembly.i386",
+		"match": "\\b(mov|add|sub|jmp|call|int|ret|push|pop|cmp|lea|xor|and|or|not|shl|shr|test)\\b"
+	  },
+	  "registers": {
+		"name": "variable.register.assembly.i386",
+		"match": "\\b(eax|ebx|ecx|edx|esi|edi|esp|ebp|eip)\\b"
+	  },
+	  "directives": {
+		"name": "storage.modifier.assembly.i386",
+		"match": "\\b(section|global|extern|db|dw|dd|resb|resw|resd|equ)\\b"
+	  },
+	  "comments": {
+		"name": "comment.line.assembly.i386",
+		"match": ";.*$"
+	  },
+	  "strings": {
+		"name": "string.quoted.double.assembly.i386",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.assembly.i386",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  "numbers": {
+		"name": "constant.numeric.assembly.i386",
+		"match": "\\b(0x[0-9a-fA-F]+|[0-9]+)\\b"
+	  }
 	},
 	"scopeName": "source.asm.i386"
-}
+  }
