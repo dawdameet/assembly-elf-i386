@@ -134,6 +134,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 If you have any questions or feedback, feel free to reach out:
-- Email: your-email@example.com
+- Email: dawdameet6338@gmail.com
 - GitHub: [dawdameet](https://github.com/dawdameet)
 
